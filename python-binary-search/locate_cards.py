@@ -13,11 +13,8 @@ LINEAR SEARCH ALGORITHM
 
 
 def locate_cards(cards, query):
-    if len(cards) == 0:
-        return -1
-
     position = 0
-    while True:
+    while position < len(cards):
         if cards[position] == query:
             return position
 
@@ -25,7 +22,7 @@ def locate_cards(cards, query):
 
         if position == len(cards):
             return -1
-
+    return -1
 
 tests = []
 
